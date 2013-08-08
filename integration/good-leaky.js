@@ -13,10 +13,10 @@ marionette('modal dialog warnings', function() {
   // your testing is all directly related to one flow.
   test('submiting form with invalid data', function() {
     // the reasons for abstractions can vary- the most important reason
-    // is the elements, selectors, etc... Will absolutely change the
-    // fact that you probably need to submit this form will change the
-    // least. By separating the logic you can show the intent of the
-    // test without leaking implementation details.
+    // is the elements, selectors, etc... will absolutely change. The
+    // fact that you need to submit this form will change less frequently.
+    // By separating the logic you can show the intent of the test without 
+    // leaking implementation details.
     subject.submitForm();
 
     var warningDialog = subject.visibleDialog('warning');
